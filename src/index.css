@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-gradient-to-r from-blue to-green;
+  }
+
+  button {
+    @apply border border-gray-200 bg-slate-100 text-slate-700 hover:opacity-75 active:opacity-40;
+  }
+}
