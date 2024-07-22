@@ -3,13 +3,8 @@ import { AddTodoModal } from "./components/AddTodo";
 import { Header } from "./components/Header";
 import { TodoList } from "./components/TodoList";
 import { FaPlus } from "react-icons/fa6";
+import { Task } from "./lib/data";
 
-export interface Task {
-  id: number;
-  title: string;
-  notes?: string;
-  isComplete?: boolean;
-}
 const testTasks: Task[] = [
   {
     id: 1,
@@ -29,7 +24,7 @@ const testTasks: Task[] = [
 function App() {
   const [tasks, setTasks] = useState<Task[]>(testTasks);
   const [isOpen, setIsOpen] = useState(false);
-  const [viewComplete, setViewComplete] = useState(false);
+
   return (
     <>
       <Header />
@@ -45,7 +40,7 @@ function App() {
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
-      <TodoList tasks={tasks} setTasks={setTasks} viewComplete={viewComplete} />
+      <TodoList tasks={tasks} setTasks={setTasks} />
     </>
   );
 }

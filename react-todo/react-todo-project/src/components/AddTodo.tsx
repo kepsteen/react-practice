@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { Task } from "../App";
+import { Task } from "../lib/data";
 import { ChangeEvent, useEffect, useRef, useState } from "react";
 
 type Props = {
@@ -58,7 +58,7 @@ export function AddTodoModal({ tasks, setTasks, isOpen, setIsOpen }: Props) {
         </label>
         <label htmlFor="" className="w-full text-info">
           <textarea
-            className="w-full textarea textarea-bordered"
+            className="w-full px-3 textarea textarea-bordered"
             placeholder="Notes"
             name="notes"
             value={notes}
